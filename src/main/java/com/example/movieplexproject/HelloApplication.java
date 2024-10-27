@@ -26,7 +26,8 @@ public class HelloApplication extends Application {
         Button movies = new Button("Movies");
         Button primeUsers = new Button("Prime Users");
         Button employee = new Button("Employee");
-        buttonBox.getChildren().addAll(movies,primeUsers,employee);
+        Button exit = new Button("Exit");
+        buttonBox.getChildren().addAll(movies,primeUsers,employee,exit);
         buttonBox.setAlignment(Pos.CENTER);
 
         pane.setTop(titleBox);
