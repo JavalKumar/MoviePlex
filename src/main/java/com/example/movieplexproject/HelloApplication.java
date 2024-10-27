@@ -1,42 +1,38 @@
 package com.example.movieplexproject;
 
+import com.example.movieplexproject.Scenes.LandingScene;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
+
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    public static Stage mainStage;
     @Override
     public void start(Stage stage) throws IOException {
-        BorderPane pane = new BorderPane();
+//        BorderPane pane = new BorderPane();
+//
+//        VBox titleBox = new VBox();
+//        Text title = new Text("MOVIEPLEX");
+//        titleBox.getChildren().add(title);
+//        titleBox.setAlignment(Pos.TOP_CENTER);
+//
+//        VBox buttonBox = new VBox();
+//        Button movies = new Button("Movies");
+//        Button primeUsers = new Button("Prime Users");
+//        Button employee = new Button("Employee");
+//        Button exit = new Button("Exit");
+//        buttonBox.getChildren().addAll(movies,primeUsers,employee,exit);
+//        buttonBox.setAlignment(Pos.CENTER);
+//
+//        pane.setTop(titleBox);
+//        pane.setCenter(buttonBox);
 
-        VBox titleBox = new VBox();
-        Text title = new Text("MOVIEPLEX");
-        titleBox.getChildren().add(title);
-        titleBox.setAlignment(Pos.TOP_CENTER);
-
-        VBox buttonBox = new VBox();
-        Button movies = new Button("Movies");
-        Button primeUsers = new Button("Prime Users");
-        Button employee = new Button("Employee");
-        Button exit = new Button("Exit");
-        buttonBox.getChildren().addAll(movies,primeUsers,employee,exit);
-        buttonBox.setAlignment(Pos.CENTER);
-
-        pane.setTop(titleBox);
-        pane.setCenter(buttonBox);
-
-        Scene scene = new Scene(pane, 1024, 768);
-        stage.setTitle("MoviePlex");
-        stage.setScene(scene);
-        stage.show();
+        mainStage = stage;
+        mainStage.setTitle("MoviePlex");
+        mainStage.setScene(new LandingScene());
+        mainStage.show();
     }
 
     public static void main(String[] args) {
