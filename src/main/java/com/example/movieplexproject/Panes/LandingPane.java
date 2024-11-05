@@ -30,13 +30,13 @@ public class LandingPane extends BorderPane {
 
 
         Button primeUsers = new Button("Prime Users");
-        employee.setOnMouseClicked(e -> HelloApplication.mainStage.setScene(new Scene(new UserPane(),1024,768)));
+        primeUsers.setOnMouseClicked(e -> HelloApplication.mainStage.setScene(new Scene(new UserPane(),1024,768)));
 
         Button exit = new Button("Exit");
         exit.setOnMouseClicked(e -> System.exit(0));
 
         buttonBox.setAlignment(Pos.CENTER);
-        buttonBox.getChildren().addAll(movies,primeUsers,employee,exit);
+        buttonBox.getChildren().addAll(movies,employee,primeUsers,exit);
 
         this.setTop(titleBox);
         this.setCenter(buttonBox);
