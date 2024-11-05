@@ -1,6 +1,8 @@
 package com.example.movieplexproject.Panes;
 
+import com.example.movieplexproject.HelloApplication;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -16,16 +18,28 @@ public class LandingPane extends BorderPane {
         titleBox.getChildren().add(title);
         titleBox.setAlignment(Pos.TOP_CENTER);
 
+
+
         VBox buttonBox = new VBox();
         Button movies = new Button("Movies");
-        Button primeUsers = new Button("Prime Users");
-        Button employee = new Button("Employee");
-        Button exit = new Button("Exit");
-        buttonBox.getChildren().addAll(movies,primeUsers,employee,exit);
-        buttonBox.setAlignment(Pos.CENTER);
+        movies.setOnMouseClicked(e -> HelloApplication.mainStage.setScene(new Scene(new MoviePane(),1024,768)));
 
-        pane.setTop(titleBox);
-        pane.setCenter(buttonBox);
+
+        Button employee = new Button("Employee");
+        employee.setOnMouseClicked(e -> HelloApplication.mainStage.setScene(new Scene(new EmployeePane(),1024,768)));
+
+
+        Button primeUsers = new Button("Prime Users");
+        primeUsers.setOnMouseClicked(e -> HelloApplication.mainStage.setScene(new Scene(new UserPane(),1024,768)));
+
+        Button exit = new Button("Exit");
+        exit.setOnMouseClicked(e -> System.exit(0));
+
+        buttonBox.setAlignment(Pos.CENTER);
+        buttonBox.getChildren().addAll(movies,employee,primeUsers,exit);
+
+        this.setTop(titleBox);
+        this.setCenter(buttonBox);
     }
 
 }
