@@ -14,7 +14,7 @@ repositories {
 }
 
 ext {
-    junitVersion = '5.10.0'
+    junitVersion = '5.7.1'
 }
 
 sourceCompatibility = '21'
@@ -38,7 +38,7 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-    implementation 'com.mysql:mysql-connector-j:9.0.0'
+    implementation  "mysql:mysql-connector-java:8.0.26"
 }
 
 test {
