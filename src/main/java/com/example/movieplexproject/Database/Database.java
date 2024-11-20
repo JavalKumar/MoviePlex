@@ -23,6 +23,12 @@ if (connection == null){
 
     }
 }
+public static Database getInstance(){
+        if(instance==null){
+            new Database();
+        }
+        return instance;
+}
 
     }
 
