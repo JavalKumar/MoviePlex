@@ -1,6 +1,8 @@
 package com.example.movieplexproject.Database;
 
 
+import java.sql.*;
+
 public class DBConst {
     /**
      * Movie Table
@@ -98,4 +100,19 @@ public class DBConst {
             "REFERENCES " + MOVIE_TABLE + "(" + MOVIE_COLUMN_ID + "), " +
             "FOREIGN KEY (" + MOVIE_USER_COLUMN_USER_ID + ") " +
             "REFERENCES " + USER_TABLE + "(" + USER_COLUMN_ID + "));";
+
+    public void createTable(String tableName, String tableQuery, Connection connection) throws SQLException {
+        Statement createTables;
+        DatabaseMetaData md = connection.getMetaData();
+        ResultSet result = md.getTables(null, null, tableName, null);
+        if(result.next()) {
+            System.out.println(tableName + "Table already exist!");
+        }
+        else {
+            createTables = connection.createStatement();
+            boolean inserted = createTables.execute(tableQuery);
+            System.out.println("The" + tableName + "Table has been inserted:" + !inserted );
+        }
+    }
+
 }
