@@ -8,7 +8,7 @@ public class DBConst {
      * Movie Table
      */
     public static final String MOVIE_TABLE = "movie";
-    public static final String MOVIE_COLUMN_ID = "id";
+    public static final String MOVIE_COLUMN_ID = "movie_id";
     public static final String MOVIE_COLUMN_NAME = "name";
     public static final String MOVIE_COLUMN_RATING = "rating";
     public static final String MOVIE_COLUMN_GENRE = "genre";
@@ -20,7 +20,7 @@ public class DBConst {
      * Employee Table
      */
     public static final String EMPLOYEE_TABLE = "employee";
-    public static final String EMPLOYEE_COLUMN_ID = "id";
+    public static final String EMPLOYEE_COLUMN_ID = "employeeTable_id";
     public static final String EMPLOYEE_COLUMN_FIRST_NAME = "first_name";
     public static final String EMPLOYEE_COLUMN_LAST_NAME = "last_name";
     public static final String EMPLOYEE_COLUMN_EMAIL = "email";
@@ -30,7 +30,7 @@ public class DBConst {
      * User Table
      */
     public static final String USER_TABLE = "user";
-    public static final String USER_COLUMN_ID = "id";
+    public static final String USER_COLUMN_ID = "user_id";
     public static final String USER_COLUMN_FIRST_NAME = "first_name";
     public static final String USER_COLUMN_LAST_NAME = "last_name";
     public static final String USER_COLUMN_CONTACT = "contact";
@@ -40,7 +40,7 @@ public class DBConst {
      * Movie Employee Table
      */
     public static final String MOVIE_EMPLOYEE_TABLE = "movie_employee";
-    public static final String MOVIE_EMPLOYEE_COLUMN_ID = "id";
+    public static final String MOVIE_EMPLOYEE_COLUMN_ID = "movieemp_id";
     public static final String MOVIE_EMPLOYEE_COLUMN_MOVIE_ID = MOVIE_COLUMN_ID;
     public static final String MOVIE_EMPLOYEE_COLUMN_EMPLOYEE_ID = EMPLOYEE_COLUMN_ID;
 
@@ -49,7 +49,7 @@ public class DBConst {
      */
 
     public static final String MOVIE_USER_TABLE = "movie_user";
-    public static final String MOVIE_USER_COLUMN_ID = "id";
+    public static final String MOVIE_USER_COLUMN_ID = "movie_user_id";
     public static final String MOVIE_USER_COLUMN_MOVIE_ID = MOVIE_COLUMN_ID;
     public static final String MOVIE_USER_COLUMN_USER_ID = USER_COLUMN_ID ;
 
