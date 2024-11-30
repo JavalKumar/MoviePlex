@@ -1,6 +1,5 @@
 package com.example.movieplexproject;
 
-//import com.example.movieplexproject.Scenes.LandingScene;
 import com.example.movieplexproject.Database.Database;
 import com.example.movieplexproject.Tabs.AddTab;
 import com.example.movieplexproject.Tabs.RemoveTab;
